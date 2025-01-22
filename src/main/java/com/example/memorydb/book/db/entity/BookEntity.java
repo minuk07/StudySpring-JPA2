@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 public class BookEntity{
 
     @Id //프라이머리 키로 설정
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //MySQL
     private Long id;
 
     private String name;
