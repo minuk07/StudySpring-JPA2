@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 @Entity(name = "book")
 public class BookEntity{
 
-    @Id
+    @Id //프라이머리 키로 설정
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
