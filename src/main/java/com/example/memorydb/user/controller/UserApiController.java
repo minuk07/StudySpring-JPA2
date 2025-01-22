@@ -40,7 +40,16 @@ public class UserApiController {
 
     @GetMapping("/score")
     public List<UserEntity> findOverScore(@RequestParam int score){
-       return null;
-        //return userService.filtersScore(score);
+
+        return userService.filterScore(score);
+    }
+
+    @GetMapping("/min_max")
+    public List<UserEntity> findOverScore(
+            @RequestParam int min,
+            @RequestParam int max
+    ){
+
+        return userService.filterScore(min,max);
     }
 }
