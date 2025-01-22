@@ -29,7 +29,7 @@ public class UserApiController {
 
     @DeleteMapping("/id/{id}")
     public void delete(@PathVariable Long id){
-        userService.delete(id);
+        //userService.delete(id);
     }
 
     @GetMapping("/id/{id}")
@@ -38,8 +38,9 @@ public class UserApiController {
         return response.get(); //null 값이 리턴될 수 있도록
     }
 
-    @GetMapping("/score/{score}")
-    public List<UserEntity> findOverScore(@PathVariable int score){
-        return userService.filtersScore(score);
+    @GetMapping("/score")
+    public List<UserEntity> findOverScore(@RequestParam int score){
+       return null;
+        //return userService.filtersScore(score);
     }
 }
